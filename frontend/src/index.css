@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* Custom animated wavy background */
+body {
+  background: #0f0f1f;
+  background-image: radial-gradient(circle at 0% 0%, rgba(98, 0, 234, 0.2) 1px, transparent 1px),
+                    radial-gradient(circle at 100% 100%, rgba(98, 0, 234, 0.2) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: moveWave 8s linear infinite;
+  overflow-x: hidden;
+}
+
+/* Background animation */
+@keyframes waveMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.animate-waveMove {
+  animation: waveMove 10s linear infinite;
+}
